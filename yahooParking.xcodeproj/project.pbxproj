@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		39AF594A1981C66E000FE447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF59491981C66E000FE447 /* Foundation.framework */; };
+		39AF594C1981C66E000FE447 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF594B1981C66E000FE447 /* CoreGraphics.framework */; };
+		39AF594E1981C66E000FE447 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF594D1981C66E000FE447 /* UIKit.framework */; };
+		39AF59541981C66E000FE447 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39AF59521981C66E000FE447 /* InfoPlist.strings */; };
+		39AF59561981C66E000FE447 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AF59551981C66E000FE447 /* main.m */; };
+		39AF595A1981C66E000FE447 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AF59591981C66E000FE447 /* AppDelegate.m */; };
+		39AF595C1981C66E000FE447 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39AF595B1981C66E000FE447 /* Images.xcassets */; };
+		39AF59631981C66E000FE447 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF59621981C66E000FE447 /* XCTest.framework */; };
+		39AF59641981C66E000FE447 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF59491981C66E000FE447 /* Foundation.framework */; };
+		39AF59651981C66E000FE447 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 39AF594D1981C66E000FE447 /* UIKit.framework */; };
+		39AF596D1981C66E000FE447 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 39AF596B1981C66E000FE447 /* InfoPlist.strings */; };
+		39AF596F1981C66E000FE447 /* yahooParkingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 39AF596E1981C66E000FE447 /* yahooParkingTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		39AF59661981C66E000FE447 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 39AF593E1981C66E000FE447 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 39AF59451981C66E000FE447;
+			remoteInfo = yahooParking;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		39AF59461981C66E000FE447 /* yahooParking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yahooParking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		39AF59491981C66E000FE447 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		39AF594B1981C66E000FE447 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		39AF594D1981C66E000FE447 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		39AF59511981C66E000FE447 /* yahooParking-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "yahooParking-Info.plist"; sourceTree = "<group>"; };
+		39AF59531981C66E000FE447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39AF59551981C66E000FE447 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		39AF59571981C66E000FE447 /* yahooParking-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "yahooParking-Prefix.pch"; sourceTree = "<group>"; };
+		39AF59581981C66E000FE447 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		39AF59591981C66E000FE447 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		39AF595B1981C66E000FE447 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		39AF59611981C66E000FE447 /* yahooParkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = yahooParkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		39AF59621981C66E000FE447 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		39AF596A1981C66E000FE447 /* yahooParkingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "yahooParkingTests-Info.plist"; sourceTree = "<group>"; };
+		39AF596C1981C66E000FE447 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		39AF596E1981C66E000FE447 /* yahooParkingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = yahooParkingTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		39AF59431981C66E000FE447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF594C1981C66E000FE447 /* CoreGraphics.framework in Frameworks */,
+				39AF594E1981C66E000FE447 /* UIKit.framework in Frameworks */,
+				39AF594A1981C66E000FE447 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39AF595E1981C66E000FE447 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF59631981C66E000FE447 /* XCTest.framework in Frameworks */,
+				39AF59651981C66E000FE447 /* UIKit.framework in Frameworks */,
+				39AF59641981C66E000FE447 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		39AF593D1981C66E000FE447 = {
+			isa = PBXGroup;
+			children = (
+				39AF594F1981C66E000FE447 /* yahooParking */,
+				39AF59681981C66E000FE447 /* yahooParkingTests */,
+				39AF59481981C66E000FE447 /* Frameworks */,
+				39AF59471981C66E000FE447 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		39AF59471981C66E000FE447 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				39AF59461981C66E000FE447 /* yahooParking.app */,
+				39AF59611981C66E000FE447 /* yahooParkingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		39AF59481981C66E000FE447 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				39AF59491981C66E000FE447 /* Foundation.framework */,
+				39AF594B1981C66E000FE447 /* CoreGraphics.framework */,
+				39AF594D1981C66E000FE447 /* UIKit.framework */,
+				39AF59621981C66E000FE447 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		39AF594F1981C66E000FE447 /* yahooParking */ = {
+			isa = PBXGroup;
+			children = (
+				39AF59581981C66E000FE447 /* AppDelegate.h */,
+				39AF59591981C66E000FE447 /* AppDelegate.m */,
+				39AF595B1981C66E000FE447 /* Images.xcassets */,
+				39AF59501981C66E000FE447 /* Supporting Files */,
+			);
+			path = yahooParking;
+			sourceTree = "<group>";
+		};
+		39AF59501981C66E000FE447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39AF59511981C66E000FE447 /* yahooParking-Info.plist */,
+				39AF59521981C66E000FE447 /* InfoPlist.strings */,
+				39AF59551981C66E000FE447 /* main.m */,
+				39AF59571981C66E000FE447 /* yahooParking-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		39AF59681981C66E000FE447 /* yahooParkingTests */ = {
+			isa = PBXGroup;
+			children = (
+				39AF596E1981C66E000FE447 /* yahooParkingTests.m */,
+				39AF59691981C66E000FE447 /* Supporting Files */,
+			);
+			path = yahooParkingTests;
+			sourceTree = "<group>";
+		};
+		39AF59691981C66E000FE447 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				39AF596A1981C66E000FE447 /* yahooParkingTests-Info.plist */,
+				39AF596B1981C66E000FE447 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		39AF59451981C66E000FE447 /* yahooParking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39AF59721981C66E000FE447 /* Build configuration list for PBXNativeTarget "yahooParking" */;
+			buildPhases = (
+				39AF59421981C66E000FE447 /* Sources */,
+				39AF59431981C66E000FE447 /* Frameworks */,
+				39AF59441981C66E000FE447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yahooParking;
+			productName = yahooParking;
+			productReference = 39AF59461981C66E000FE447 /* yahooParking.app */;
+			productType = "com.apple.product-type.application";
+		};
+		39AF59601981C66E000FE447 /* yahooParkingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 39AF59751981C66E000FE447 /* Build configuration list for PBXNativeTarget "yahooParkingTests" */;
+			buildPhases = (
+				39AF595D1981C66E000FE447 /* Sources */,
+				39AF595E1981C66E000FE447 /* Frameworks */,
+				39AF595F1981C66E000FE447 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				39AF59671981C66E000FE447 /* PBXTargetDependency */,
+			);
+			name = yahooParkingTests;
+			productName = yahooParkingTests;
+			productReference = 39AF59611981C66E000FE447 /* yahooParkingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		39AF593E1981C66E000FE447 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = derrickor;
+				TargetAttributes = {
+					39AF59601981C66E000FE447 = {
+						TestTargetID = 39AF59451981C66E000FE447;
+					};
+				};
+			};
+			buildConfigurationList = 39AF59411981C66E000FE447 /* Build configuration list for PBXProject "yahooParking" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 39AF593D1981C66E000FE447;
+			productRefGroup = 39AF59471981C66E000FE447 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				39AF59451981C66E000FE447 /* yahooParking */,
+				39AF59601981C66E000FE447 /* yahooParkingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		39AF59441981C66E000FE447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF59541981C66E000FE447 /* InfoPlist.strings in Resources */,
+				39AF595C1981C66E000FE447 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39AF595F1981C66E000FE447 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF596D1981C66E000FE447 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		39AF59421981C66E000FE447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF595A1981C66E000FE447 /* AppDelegate.m in Sources */,
+				39AF59561981C66E000FE447 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		39AF595D1981C66E000FE447 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				39AF596F1981C66E000FE447 /* yahooParkingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		39AF59671981C66E000FE447 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 39AF59451981C66E000FE447 /* yahooParking */;
+			targetProxy = 39AF59661981C66E000FE447 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		39AF59521981C66E000FE447 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39AF59531981C66E000FE447 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		39AF596B1981C66E000FE447 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				39AF596C1981C66E000FE447 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		39AF59701981C66E000FE447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		39AF59711981C66E000FE447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		39AF59731981C66E000FE447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yahooParking/yahooParking-Prefix.pch";
+				INFOPLIST_FILE = "yahooParking/yahooParking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		39AF59741981C66E000FE447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yahooParking/yahooParking-Prefix.pch";
+				INFOPLIST_FILE = "yahooParking/yahooParking-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		39AF59761981C66E000FE447 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/yahooParking.app/yahooParking";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yahooParking/yahooParking-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "yahooParkingTests/yahooParkingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		39AF59771981C66E000FE447 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/yahooParking.app/yahooParking";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "yahooParking/yahooParking-Prefix.pch";
+				INFOPLIST_FILE = "yahooParkingTests/yahooParkingTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		39AF59411981C66E000FE447 /* Build configuration list for PBXProject "yahooParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39AF59701981C66E000FE447 /* Debug */,
+				39AF59711981C66E000FE447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		39AF59721981C66E000FE447 /* Build configuration list for PBXNativeTarget "yahooParking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39AF59731981C66E000FE447 /* Debug */,
+				39AF59741981C66E000FE447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		39AF59751981C66E000FE447 /* Build configuration list for PBXNativeTarget "yahooParkingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39AF59761981C66E000FE447 /* Debug */,
+				39AF59771981C66E000FE447 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 39AF593E1981C66E000FE447 /* Project object */;
+}
