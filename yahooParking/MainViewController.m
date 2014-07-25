@@ -76,7 +76,7 @@
     NSURL *requestUrl = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=06a132f82ae744fe9c48ff2258dbaaa8"];
     */
 
-    NSURL *requestUrl = [NSURL URLWithString:@"http://ymsegads-01.ops.corp.gq1.yahoo.com/projects/hack/ycanpark/get/"];
+    NSURL *requestUrl = [NSURL URLWithString:@"http://ymsegads-01.ops.corp.gq1.yahoo.com/projects/hack/ycanpark/get/index.php"];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
@@ -88,13 +88,21 @@
         //NSLog(@"statusCode: %d", statusCode);
         //NSLog(@"data: %@", data);
         
-        
-        /*
         NSString *json = [NSString stringWithContentsOfURL:requestUrl
                                  encoding:NSASCIIStringEncoding
                                     error:nil];
-        NSLog(@"JSON: %@", json);
-        */
+        NSRange rangeOfSubstring = [json rangeOfString:@"}"];
+        json = [json substringToIndex:rangeOfSubstring.location+1];
+        
+        NSDictionary *JSON =
+        [NSJSONSerialization JSONObjectWithData: [json dataUsingEncoding:NSUTF8StringEncoding]
+                                        options: NSJSONReadingMutableContainers
+                                          error: nil];
+        
+        NSLog(@"json: %@", json);
+        NSLog(@"JSON: %@", JSON);
+        
+        self.stats = JSON;
         
         /*
         NSDictionary *object = [NSJSONSerialization
@@ -105,7 +113,7 @@
         NSLog(@"RESPONSE: %@", object);
         */
         
-        id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        //id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
         /*
         self.stats = @{
@@ -117,7 +125,7 @@
                        };
         */
         
-        self.stats = object;
+        //self.stats = object;
         
         self.cLabel.text = @"?";
         self.bLabel.text = @"?";
