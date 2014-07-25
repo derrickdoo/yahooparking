@@ -65,27 +65,65 @@
     self.dLabel.hidden = YES;
     self.eLabel.hidden = YES;
     self.gLabel.hidden = YES;
+    
     self.cLoader.hidden = NO;
     self.bLoader.hidden = NO;
     self.dLoader.hidden = NO;
     self.eLoader.hidden = NO;
     self.gLoader.hidden = NO;
     
-    NSURL *instagramUrl = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=06a132f82ae744fe9c48ff2258dbaaa8"];
+    /*
+    NSURL *requestUrl = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=06a132f82ae744fe9c48ff2258dbaaa8"];
+    */
+
+    NSURL *requestUrl = [NSURL URLWithString:@"http://ymsegads-01.ops.corp.gq1.yahoo.com/projects/hack/ycanpark/get/"];
     
-    NSURLRequest *request = [NSURLRequest requestWithURL:instagramUrl];
+    NSURLRequest *request = [NSURLRequest requestWithURL:requestUrl];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+        
+        
+        //NSLog(@"url %@",requestUrl);
+        //NSLog(@"response: %@", response);
+        //NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+        //NSLog(@"statusCode: %d", statusCode);
+        //NSLog(@"data: %@", data);
+        
+        
+        /*
+        NSString *json = [NSString stringWithContentsOfURL:requestUrl
+                                 encoding:NSASCIIStringEncoding
+                                    error:nil];
+        NSLog(@"JSON: %@", json);
+        */
+        
+        /*
+        NSDictionary *object = [NSJSONSerialization
+                                JSONObjectWithData: data
+                                options: NSJSONReadingMutableContainers
+                                error: nil];
+        
+        NSLog(@"RESPONSE: %@", object);
+        */
+        
         id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
-        //NSLog(@"RESPONSE: %@", object[@"data"]);
-        
+        /*
         self.stats = @{
-                       @"c": @23,
+                       @"c": @"",
                        @"b": @78,
-                       @"d": @121,
+                       @"d": @9,
                        @"e": @3,
                        @"g": @12
                        };
+        */
+        
+        self.stats = object;
+        
+        self.cLabel.text = @"?";
+        self.bLabel.text = @"?";
+        self.dLabel.text = @"?";
+        self.eLabel.text = @"?";
+        self.gLabel.text = @"?";
         
         self.cLabel.hidden = NO;
         self.bLabel.hidden = NO;
@@ -93,11 +131,23 @@
         self.eLabel.hidden = NO;
         self.gLabel.hidden = NO;
         
-        self.cLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"c"]];
-        self.bLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"b"]];
-        self.dLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"d"]];
-        self.eLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"e"]];
-        self.gLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"g"]];
+        
+        if([self.stats[@"c"] integerValue] > 0) {
+            self.cLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"c"]];
+        }
+        if([self.stats[@"b"] integerValue] > 0) {
+            self.bLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"b"]];
+        }
+        if([self.stats[@"d"] integerValue] > 0) {
+            self.dLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"d"]];
+        }
+        if([self.stats[@"e"] integerValue] > 0) {
+            self.eLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"e"]];
+        }
+        if([self.stats[@"g"] integerValue] > 0) {
+            self.gLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"g"]];
+        }
+        
         self.cLoader.hidden = YES;
         self.bLoader.hidden = YES;
         self.dLoader.hidden = YES;
@@ -106,6 +156,8 @@
         //self.photos = object[@"data"];
         //[self.tableView reloadData];
     }];
+    
+    [self performSelector:@selector(updateStats) withObject:nil afterDelay:30];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView; {
