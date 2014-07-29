@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "bg.png"
+      "filename" : "bubble_03.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "bg-1.png"
+      "filename" : "bubble_03-1.png"
     }
   ],
   "info" : {

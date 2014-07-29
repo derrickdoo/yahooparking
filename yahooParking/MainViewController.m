@@ -16,11 +16,16 @@
 @property (strong, nonatomic) IBOutlet UILabel *dLabel;
 @property (strong, nonatomic) IBOutlet UILabel *eLabel;
 @property (strong, nonatomic) IBOutlet UILabel *gLabel;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *dLoader;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *cLoader;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *bLoader;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *eLoader;
-@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *gLoader;
+@property (strong, nonatomic) IBOutlet UIImageView *smCar;
+@property (strong, nonatomic) IBOutlet UIImageView *mdCar;
+@property (strong, nonatomic) IBOutlet UIImageView *bgCarImage;
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loader;
+
+@property (strong, nonatomic) IBOutlet UIView *cBubbleView;
+@property (strong, nonatomic) IBOutlet UIView *dBubbleView;
+@property (strong, nonatomic) IBOutlet UIView *bBubbleView;
+@property (strong, nonatomic) IBOutlet UIView *eBubbleView;
+@property (strong, nonatomic) IBOutlet UIView *gBubbleView;
 @end
 
 @implementation MainViewController
@@ -60,18 +65,6 @@
 
 - (void)updateStats
 {
-    self.cLabel.hidden = YES;
-    self.bLabel.hidden = YES;
-    self.dLabel.hidden = YES;
-    self.eLabel.hidden = YES;
-    self.gLabel.hidden = YES;
-    
-    self.cLoader.hidden = NO;
-    self.bLoader.hidden = NO;
-    self.dLoader.hidden = NO;
-    self.eLoader.hidden = NO;
-    self.gLoader.hidden = NO;
-    
     /*
     NSURL *requestUrl = [NSURL URLWithString:@"https://api.instagram.com/v1/media/popular?client_id=06a132f82ae744fe9c48ff2258dbaaa8"];
     */
@@ -109,23 +102,21 @@
                                 JSONObjectWithData: data
                                 options: NSJSONReadingMutableContainers
                                 error: nil];
-        
-        NSLog(@"RESPONSE: %@", object);
         */
         
         
         //id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
-        /*
-        self.stats = @{
-                       @"c": @"",
-                       @"b": @78,
-                       @"d": @9,
-                       @"e": @3,
-                       @"g": @12
-                       };
-        */
-        
         //self.stats = object;
+        
+        /*
+         self.stats = @{
+         @"c": @"",
+         @"b": @78,
+         @"d": @9,
+         @"e": @3,
+         @"g": @12
+         };
+         */
         
         self.cLabel.text = @"?";
         self.bLabel.text = @"?";
@@ -138,6 +129,8 @@
         self.dLabel.hidden = NO;
         self.eLabel.hidden = NO;
         self.gLabel.hidden = NO;
+        
+        self.loader.hidden = YES;
         
         if([self.stats[@"c"] integerValue] > 0) {
             self.cLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"c"]];
@@ -155,19 +148,59 @@
             self.gLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"g"]];
         }
         
-        self.cLoader.hidden = YES;
-        self.bLoader.hidden = YES;
-        self.dLoader.hidden = YES;
-        self.eLoader.hidden = YES;
-        self.gLoader.hidden = YES;
-        //self.photos = object[@"data"];
+
     }];
     
     [self performSelector:@selector(updateStats) withObject:nil afterDelay:30];
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView; {
+    self.bgCarImage.image = [UIImage imageNamed:@"big_car"];
     [self updateStats];
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    //Hide labels
+    self.cLabel.hidden = YES;
+    self.bLabel.hidden = YES;
+    self.dLabel.hidden = YES;
+    self.eLabel.hidden = YES;
+    self.gLabel.hidden = YES;
+    self.loader.hidden = NO;
+    
+    //NSLog(@"scrolling %f", scrollView.contentOffset.y);
+    
+    self.bgCarImage.image = [UIImage imageNamed:@"big_car2"];
+    
+    
+    CGRect bubbleFrame = self.cBubbleView.frame;
+    bubbleFrame.origin.y = 52-(scrollView.contentOffset.y*.6);
+    self.cBubbleView.frame = bubbleFrame;
+    
+    CGRect dBubbleFrame = self.dBubbleView.frame;
+    dBubbleFrame.origin.y = 233-(scrollView.contentOffset.y*.80);
+    self.dBubbleView.frame = dBubbleFrame;
+    
+    CGRect bBubbleFrame = self.bBubbleView.frame;
+    bBubbleFrame.origin.y = 115-(scrollView.contentOffset.y*.70);
+    self.bBubbleView.frame = bBubbleFrame;
+
+    CGRect eBubbleFrame = self.eBubbleView.frame;
+    eBubbleFrame.origin.y = 338-(scrollView.contentOffset.y*.90);
+    self.eBubbleView.frame = eBubbleFrame;
+    
+    CGRect gBubbleFrame = self.gBubbleView.frame;
+    gBubbleFrame.origin.y = 313-(scrollView.contentOffset.y*.90);
+    self.gBubbleView.frame = gBubbleFrame;
+    
+    CGRect smCarFrame = self.smCar.frame;
+    smCarFrame.origin.y = 170-(scrollView.contentOffset.y*.91);
+    self.smCar.frame = smCarFrame;
+    
+    CGRect mdCarFrame = self.mdCar.frame;
+    mdCarFrame.origin.y = 165-(scrollView.contentOffset.y*.94);
+    self.mdCar.frame = mdCarFrame;
 }
 
 @end
