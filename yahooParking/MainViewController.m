@@ -20,6 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *mdCar;
 @property (strong, nonatomic) IBOutlet UIImageView *bgCarImage;
 @property (strong, nonatomic) IBOutlet UIActivityIndicatorView *loader;
+@property (strong, nonatomic) IBOutlet UIView *refreshingView;
 
 @property (strong, nonatomic) IBOutlet UIView *cBubbleView;
 @property (strong, nonatomic) IBOutlet UIView *dBubbleView;
@@ -131,6 +132,7 @@
         self.gLabel.hidden = NO;
         
         self.loader.hidden = YES;
+        self.refreshingView.hidden = YES;
         
         if([self.stats[@"c"] integerValue] > 0) {
             self.cLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"c"]];
@@ -167,12 +169,12 @@
     self.dLabel.hidden = YES;
     self.eLabel.hidden = YES;
     self.gLabel.hidden = YES;
+    self.refreshingView.hidden = NO;
     self.loader.hidden = NO;
     
     //NSLog(@"scrolling %f", scrollView.contentOffset.y);
     
     self.bgCarImage.image = [UIImage imageNamed:@"big_car2"];
-    
     
     CGRect bubbleFrame = self.cBubbleView.frame;
     bubbleFrame.origin.y = 52-(scrollView.contentOffset.y*.6);
