@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>814EF1E5-567D-497D-BBC9-DE47D3B393ED</string>
+	<string>7248E902-4F11-4643-BE05-05EE28D28808</string>
 	<key>IDESourceControlProjectName</key>
 	<string>yahooParking</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>ABDE252C-E86E-48AD-B523-BB01E6D4F362</key>
-		<string>ssh://git.corp.yahoo.com/derricko/yahooparking.git</string>
+		<key>7FDDA5FD-6EC6-4D1D-9CF2-204F6B588BD5</key>
+		<string>ssh://github.com/derrickdoo/yahooparking.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>yahooParking.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>ABDE252C-E86E-48AD-B523-BB01E6D4F362</key>
+		<key>7FDDA5FD-6EC6-4D1D-9CF2-204F6B588BD5</key>
 		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>ssh://git.corp.yahoo.com/derricko/yahooparking.git</string>
+	<string>ssh://github.com/derrickdoo/yahooparking.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>ABDE252C-E86E-48AD-B523-BB01E6D4F362</string>
+	<string>7FDDA5FD-6EC6-4D1D-9CF2-204F6B588BD5</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>ABDE252C-E86E-48AD-B523-BB01E6D4F362</string>
+			<string>7FDDA5FD-6EC6-4D1D-9CF2-204F6B588BD5</string>
 			<key>IDESourceControlWCCName</key>
-			<string>yahooParking</string>
+			<string>yahooParkingApp</string>
 		</dict>
 	</array>
 </dict>

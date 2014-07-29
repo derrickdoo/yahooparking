@@ -113,8 +113,8 @@
         NSLog(@"RESPONSE: %@", object);
         */
         
-        //id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         
+        //id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         /*
         self.stats = @{
                        @"c": @"",
@@ -139,7 +139,6 @@
         self.eLabel.hidden = NO;
         self.gLabel.hidden = NO;
         
-        
         if([self.stats[@"c"] integerValue] > 0) {
             self.cLabel.text = [NSString stringWithFormat:@"%@", self.stats[@"c"]];
         }
@@ -162,7 +161,6 @@
         self.eLoader.hidden = YES;
         self.gLoader.hidden = YES;
         //self.photos = object[@"data"];
-        //[self.tableView reloadData];
     }];
     
     [self performSelector:@selector(updateStats) withObject:nil afterDelay:30];
